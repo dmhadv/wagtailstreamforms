@@ -195,7 +195,7 @@ class HookSelectField(models.Field):
         return super().formfield(**defaults)
 
     def from_db_value(
-        self, value, expression, connection, context=None, *args, **kwargs
+        self, value, expression, connection, *args, **kwargs
     ):
         if value is None or value == "":
             return []
